@@ -51,7 +51,7 @@ const Post: NextPage<Props> = ({ posts }) => {
       </Head>
       <main>
         <h1>{post.fields.title}</h1>
-        <p>{post.fields.introduction}</p>
+        <div>{documentToReactComponents(post.fields.content)}</div>
       </main>
     </div>
   );
