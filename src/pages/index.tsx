@@ -28,13 +28,13 @@ const Home: NextPage<Props> = ({ posts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>Contentful with Next.js</h1>
+        <h1 className={styles.title}>森田啓介のブログ</h1>
         <div>
           <ul>
             {posts &&
               posts.map((post: Entry<IPostFields>) => (
                 <li key={post.sys.id}>
-                  <Link href={post.fields.slug}>
+                  <Link href={post.fields.title}>
                     <a>
                       <h2>{post.fields.title}</h2>
                     </a>
